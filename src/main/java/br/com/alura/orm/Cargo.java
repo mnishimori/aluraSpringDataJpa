@@ -15,6 +15,10 @@ public class Cargo {
 	private Integer id;
 	
 	private String descricao;
+	
+	public Cargo() {
+		
+	}
 
 	public Cargo(String descricao) {
 		this.descricao = descricao;
@@ -34,6 +38,11 @@ public class Cargo {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	@Override
+	public String toString() {
+		return "Cargo [id=" + id + ", descricao=" + descricao + "]";
 	}
 	
 }
