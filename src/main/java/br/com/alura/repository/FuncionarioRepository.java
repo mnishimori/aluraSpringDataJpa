@@ -4,12 +4,14 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 
 import br.com.alura.orm.Funcionario;
 import br.com.alura.orm.FuncionarioProjecao;
 
-public interface FuncionarioRepository extends JpaRepository<Funcionario, Integer>{
+public interface FuncionarioRepository extends JpaRepository<Funcionario, Integer>,
+	JpaSpecificationExecutor<Funcionario>{
 	
 	List<Funcionario> findByNomeLike(String nome);
 	
